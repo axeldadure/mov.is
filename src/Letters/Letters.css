@@ -1,0 +1,17 @@
+.letter {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    display: inline-block;
+    cursor: pointer;
+}
+
+    .letter.used {
+        opacity: 0.3;
+        pointer-events: none;
+    }

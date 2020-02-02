@@ -13,26 +13,21 @@
     letter-spacing: 5px;
 }
 
+    .phraseCtWon {
+        color: green;
+    }
+
+    .phraseCtLost {
+        color: red;
+    }
+
 .lettersCt {
     display: block;
     width: 600px;
     margin: 50px auto;
 }
 
-.letter {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 40px;
-    width: 40px;
+.clueCt {
     text-align: center;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #000;
-    float:left;
-    cursor: pointer;
+    margin-top: 20px;
 }
-
-    .letter.used {
-        opacity: 0.3;
-        pointer-events: none;
-    }
