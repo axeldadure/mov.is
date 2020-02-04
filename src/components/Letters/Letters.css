@@ -1,0 +1,32 @@
+.letter {
+    font-size: 37px;
+    font-family: 'Quicksand-Bold';
+    color: #626262;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 6px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #eaebf0;
+    border: 1px solid #e4e4e4;
+    box-shadow:  5px 5px 10px #dadbdf, 
+    -5px -5px 10px #fafbff;
+    transition: 0.2s all ease-out;
+    user-select: none;
+}
+
+    .letter:hover {
+        box-shadow: inset 5px 5px 10px #dadbdf, 
+        inset -5px -5px 10px #fafbff;
+    }
+
+    .letter.used {
+        pointer-events: none;
+        opacity: 0.3;
+        box-shadow: inset 5px 5px 10px #dadbdf00, 
+        inset -5px -5px 10px #fafbff00;
+        border: 1px solid #e4e4e400;
+    }
