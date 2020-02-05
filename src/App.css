@@ -31,7 +31,8 @@
                 font-size: 20px;
                 margin-left: 25px;
                 opacity: 0.5;
-                transition: 0.3s all ease-out;
+                transition: 0.2s all ease-out;
+                text-decoration: none;
             }
 
                 .movTopNav a.active,
@@ -53,6 +54,8 @@
         overflow: hidden;
         position: relative;
         z-index: 300;
+        margin-bottom: 100px;
+        transition: 0.2s all ease-out;
     }
 
         .movCard::before {
@@ -66,19 +69,23 @@
             display: block;
             background-color: #f7b529;
             z-index: -1;
+            transition: 0.2s all ease-out;
+            display: none;
         }
 
         .movCard::after {
             content: "";
-            width: 370px;
-            height: 370px;
+            width: 430px;
+            height: 430px;
             border-radius: 50%;
             position: absolute;
-            bottom: -150px;
-            left: -150px;
+            top: 80px;
+            left: -330px;
             display: block;
             background-color: #f7b529;
             z-index: -1;
+            transition: 0.2s all ease-out;
+            display: none;
         }
 
         .movCardTop {
@@ -97,6 +104,7 @@
             width: 44px;
             border-radius: 50%;
             background-color: #f7b529;
+            transition: 0.2s all ease-out;
             color: #fff;
             line-height: 44px;
             text-align:center;
@@ -107,7 +115,7 @@
         .phraseCt {
             text-align: center;
             width: 80%;
-            margin: 50px auto 50px auto;
+            margin: 40px auto 50px auto;
             height: 130px;
             font-size: 60px;
             color: #898989;
@@ -120,11 +128,11 @@
         }
 
             .phraseCtWon {
-                color: green;
+                color: rgb(23, 150, 23);
             }
 
             .phraseCtLost {
-                color: red;
+                color: rgb(231, 37, 37);
             }
 
         .clueCt {
@@ -141,6 +149,7 @@
                 display: inline-block;
                 border-radius: 40px;
                 background-color: #f7b529;
+                transition: 0.2s all ease-out;
             }
 
         .lettersCt {
@@ -150,3 +159,217 @@
             margin: 0px auto 50px auto;
             text-align:center;
         }
+
+            .letter {
+                font-size: 37px;
+                font-family: 'Quicksand-Bold';
+                color: #626262;
+                line-height: 60px;
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 6px;
+                display: inline-block;
+                cursor: pointer;
+                background-color: #eaebf0;
+                border: 1px solid #e4e4e4;
+                box-shadow:  5px 5px 10px #dadbdf, 
+                -5px -5px 10px #fafbff;
+                transition: 0.2s all ease-out;
+                user-select: none;
+            }
+            
+                .letter:hover {
+                    box-shadow: inset 5px 5px 10px #dadbdf, 
+                    inset -5px -5px 10px #fafbff;
+                }
+            
+                .letter.used {
+                    pointer-events: none;
+                    opacity: 0.3;
+                    box-shadow: inset 5px 5px 10px #dadbdf00, 
+                    inset -5px -5px 10px #fafbff00;
+                    border: 1px solid #e4e4e400;
+                }
+
+    .movCardPlayer2::before,
+    .movCardPlayer2::after,
+    .movCardPlayer2 .clueCt span,
+    .movCardPlayer2 .movLives  {
+        background-color: #1864bb;
+    }
+
+    .movPlayers,
+    .movGameMode {
+        float: left;
+        height: 100%;
+        background: #eaebf0;
+        border-radius: 46px;
+        position: relative;
+        box-shadow: inset 5px 5px 10px #dadbdf, 
+                    inset -5px -5px 10px #fafbff;
+    }
+
+        .movGameMode {
+            float: right;
+        }
+    
+        .movPlayers::before,
+        .movGameMode::before {
+            content: "";
+            position: absolute;
+            height: 46px;
+            width: 109px;
+            display: block;
+            border-radius: 46px;
+            z-index: 150;
+            top: -2px;
+            left: -2px;
+            background: #eaebf0;
+            box-shadow:  5px 5px 7px #dcdde2, 
+                        -5px -5px 7px #f8f9fe;
+            transition: 0.2s all ease-out;
+            border: 1px solid #e4e4e4;
+        }
+        
+            .movPlayers.movPlayer1::before {
+                left: -2px;
+                transform: none;
+            }
+        
+            .movPlayers.movPlayer2::before {
+                transform: translateX(107px);
+                width: 115px;
+            }
+
+            .movGameMode.movGameMode1::before {
+                width: 86px;
+                left: -2px;
+                transform: none;
+            }
+        
+            .movGameMode.movGameMode2::before {
+                transform: translateX(84px);
+                width: 108px;
+            }
+        
+            .movGameMode.movGameMode3::before {
+                transform: translateX(187px);
+                width: 88px;
+            }
+    
+    .movPlayers > div,
+    .movGameMode > div {
+        display: inline-block;
+        line-height: 42px;
+        padding: 0px 25px;
+        font-family: 'Quicksand-Semibold';
+        color: #898989;
+        opacity: 0.7;
+        font-size: 15px;
+        cursor: pointer;
+        position: relative;
+        z-index: 200;
+        transition: 0.2s all ease-out;
+    }
+    
+        .movPlayers > div.onMode,
+        .movGameMode > div.onMode {
+            pointer-events: none;
+            opacity: 1;
+        }
+
+    .turnRow {
+        text-align: center;
+    }
+
+    .turnStateCt {
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 25px;
+        background-color: #f7b529;
+        box-sizing: border-box;
+        margin-top: 30px;
+        padding: 20px;
+        box-shadow: 5px 5px 7px #dcdde2, 
+                 -5px -5px 7px #f8f9fe;
+        transition: 0.2s all ease-out;
+    }
+    
+        .turnRed {
+            background-color: rgb(231, 37, 37);
+        }
+
+        .turnGreen {
+            background-color: rgb(23, 150, 23);
+        }
+    
+        .turnInDouble {
+            text-align: left;
+            width: 45%;
+            display: inline-block;
+        }
+    
+        .turnIndicator {
+            margin-bottom: 10px;
+            line-height: 40px;
+            color: #fff;
+            padding: 0px 20px;
+            font-size: 22px;
+            font-family: 'Quicksand-Bold';
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            border-radius: 40px;
+            transition: 0.2s all ease-out;
+        }
+    
+            .movCardPlayer2 .turnStateCt{ 
+                background-color: #1864bb;
+            }
+            .scoreLb {
+                font-family: 'Quicksand-Semibold';
+                color: #fff;
+                font-size: 20px;
+                text-align:center;
+            }
+    
+            .scoreLb span {
+                font-size: 17px;
+            }
+    
+            .turnOff {
+                opacity: 0.5;
+            }
+
+            .turnCtWon .turnOff {
+                opacity: 1;
+            }
+
+    .ext h2 {
+        font-size: 25px;
+        color: #484848;
+        font-family: 'Quicksand-Bold';
+        margin-bottom: 20px;
+    }
+
+    .ext h3 {
+        font-size: 20px;
+        color: #f1a706;
+        font-family: 'Quicksand-Semibold';
+        opacity: 0.8;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .ext p {
+        font-family: 'Quicksand-Regular';
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .ext a {
+        color: #222
+    }
