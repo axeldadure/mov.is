@@ -113,7 +113,7 @@ class Game extends Component {
           <GameMode onClick={this.restart} playersMode={playersMode} gameMode={gameMode} />
         </div>
 
-        {gameMode > 1 && (<div className={(lives === 0 ? "turnRed" : "") + " movLives"}>{lives}</div>)}
+        {gameMode > 1 && (<div className={(lives === 0 ? "turnRed" : "") + " movLives"}><span>LIVES</span>{lives}</div>)}
 
         <div className="turnRow">
           <TurnState playersMode={playersMode} currentPlayer={currentPlayer} won={won} lives={lives} score={score} score2={score2}/>
@@ -131,7 +131,7 @@ class Game extends Component {
 
         <div className="lettersCt">
           {(won || lives === 0) ? (
-            <button onClick={() => this.restart(playersMode, gameMode)}>restart</button>
+            <button onClick={() => this.restart(playersMode, gameMode)} className="restartBtn">restart</button>
           ) : (letters.map((letter,i) => (
             <Letters used={usedLetters.includes(letter) ? true : false} letter={letter} key={i} onClick={this.handleLetterClick}/>
           )))}

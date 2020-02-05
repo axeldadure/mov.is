@@ -15,7 +15,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename='/mov.is/'>
         <div className="ct">
           <div className="movTop">
               <h1>Mov.is</h1>

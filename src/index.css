@@ -55,5 +55,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #eaebf0;
+  background:#1c1f23;
+  margin-bottom: 100px;
 }

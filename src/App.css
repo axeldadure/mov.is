@@ -15,8 +15,9 @@
         .movTop h1 {
             font-family: 'Quicksand-Bold';
             font-size: 50px;
-            color: #484848;
+            color: #fff;
             line-height: 50px;
+            letter-spacing: 2px;
             float: left;
         }
 
@@ -27,7 +28,7 @@
 
             .movTopNav a {
                 font-family: 'Quicksand-Medium';
-                color: #626262;
+                color: #fff;
                 font-size: 20px;
                 margin-left: 25px;
                 opacity: 0.5;
@@ -46,47 +47,15 @@
         box-sizing: border-box;
         margin-top: 25px;
         padding: 30px;
-        border: 1px solid #e4e4e4;
-        border-radius: 35px;
-        border-radius: 35px;
-        box-shadow:  11px 11px 12px #dedfe4, 
-                    -11px -11px 12px #f6f7fc;
+        border-radius: 40px;
+        background: linear-gradient(145deg, #1c1f23, #21242a);
+        box-shadow:  8px 8px 16px #181b1e, 
+                    -8px -8px 16px #262930;
         overflow: hidden;
         position: relative;
         z-index: 300;
-        margin-bottom: 100px;
         transition: 0.2s all ease-out;
     }
-
-        .movCard::before {
-            content: "";
-            width: 430px;
-            height: 430px;
-            border-radius: 50%;
-            position: absolute;
-            top: 80px;
-            right: -330px;
-            display: block;
-            background-color: #f7b529;
-            z-index: -1;
-            transition: 0.2s all ease-out;
-            display: none;
-        }
-
-        .movCard::after {
-            content: "";
-            width: 430px;
-            height: 430px;
-            border-radius: 50%;
-            position: absolute;
-            top: 80px;
-            left: -330px;
-            display: block;
-            background-color: #f7b529;
-            z-index: -1;
-            transition: 0.2s all ease-out;
-            display: none;
-        }
 
         .movCardTop {
             height: 42px;
@@ -96,20 +65,32 @@
 
         .movLives {
             position: absolute;
-            top: 29px;
+            top: 22px;
             left: 50%;
             transform: translateX(-50%);
             display: block;
-            height: 44px;
-            width: 44px;
+            padding-top: 15px;
+            padding-left: 2px;
+            box-sizing: border-box;
+            height: 60px;
+            width: 60px;
             border-radius: 50%;
             background-color: #f7b529;
             transition: 0.2s all ease-out;
             color: #fff;
-            line-height: 44px;
-            text-align:center;
+            line-height: 25px;
+            text-align: center;
             font-size: 20px;
             font-family: 'Quicksand-Bold';
+        }
+
+        .movLives span {
+            font-family: 'Quicksand-Semibold';
+            display: block;
+            letter-spacing: 1px;
+            font-size: 14px;
+            line-height: 14px;
+            opacity: 1;
         }
 
         .phraseCt {
@@ -118,7 +99,7 @@
             margin: 40px auto 50px auto;
             height: 130px;
             font-size: 60px;
-            color: #898989;
+            color: #fff;
             line-height: 65px;
             letter-spacing: 5px;
             font-family: 'Quicksand-Bold';
@@ -142,47 +123,48 @@
 
             .clueCt span {
                 line-height: 40px;
-                color: #fff;
+                color: #212121;
                 padding: 0px 20px;
                 font-size: 18px;
-                font-family: 'Quicksand-Regular';
+                font-family: 'Quicksand-Semibold';
                 display: inline-block;
                 border-radius: 40px;
-                background-color: #f7b529;
+                background-color: #fff;
                 transition: 0.2s all ease-out;
             }
 
         .lettersCt {
             display: block;
             width: 700px;
-            height: 200px;
-            margin: 0px auto 50px auto;
+            height: auto;
+            margin: 0px auto 25px auto;
             text-align:center;
+            transition: 0.2s all ease-out;
         }
 
             .letter {
                 font-size: 37px;
-                font-family: 'Quicksand-Bold';
-                color: #626262;
+                font-family: 'Quicksand-Semibold';
+                color: #ffffff80;
                 line-height: 60px;
                 height: 60px;
                 width: 60px;
                 border-radius: 50%;
                 text-align: center;
-                margin: 6px;
+                margin: 8px;
                 display: inline-block;
                 cursor: pointer;
-                background-color: #eaebf0;
-                border: 1px solid #e4e4e4;
-                box-shadow:  5px 5px 10px #dadbdf, 
-                -5px -5px 10px #fafbff;
+                background: linear-gradient(145deg, #1c1f23, #21242a);
+                box-shadow:  6px 6px 10px #15171b, 
+                -6px -6px 10px #292d33;
                 transition: 0.2s all ease-out;
                 user-select: none;
             }
             
                 .letter:hover {
-                    box-shadow: inset 5px 5px 10px #dadbdf, 
-                    inset -5px -5px 10px #fafbff;
+                    background: #1f2227;
+                    box-shadow: inset 6px 6px 10px #15171b, 
+                                inset -6px -6px 10px #292d33;
                 }
             
                 .letter.used {
@@ -190,25 +172,18 @@
                     opacity: 0.3;
                     box-shadow: inset 5px 5px 10px #dadbdf00, 
                     inset -5px -5px 10px #fafbff00;
-                    border: 1px solid #e4e4e400;
                 }
 
-    .movCardPlayer2::before,
-    .movCardPlayer2::after,
-    .movCardPlayer2 .clueCt span,
-    .movCardPlayer2 .movLives  {
-        background-color: #1864bb;
-    }
 
     .movPlayers,
     .movGameMode {
         float: left;
         height: 100%;
-        background: #eaebf0;
         border-radius: 46px;
         position: relative;
-        box-shadow: inset 5px 5px 10px #dadbdf, 
-                    inset -5px -5px 10px #fafbff;
+        background: #1f2227;
+        box-shadow: inset 6px 6px 11px #16181c, 
+            inset -6px -6px 11px #282c32;
     }
 
         .movGameMode {
@@ -219,53 +194,51 @@
         .movGameMode::before {
             content: "";
             position: absolute;
-            height: 46px;
-            width: 109px;
+            height: 38px;
+            width: 100px;
             display: block;
-            border-radius: 46px;
+            border-radius: 41px;
             z-index: 150;
-            top: -2px;
-            left: -2px;
-            background: #eaebf0;
-            box-shadow:  5px 5px 7px #dcdde2, 
-                        -5px -5px 7px #f8f9fe;
+            top: 2px;
+            left: 2px;
+            background: linear-gradient(145deg, #2f333b, #1c1f23 );
             transition: 0.2s all ease-out;
-            border: 1px solid #e4e4e4;
+            border: 1px solid #2f333b;
         }
         
             .movPlayers.movPlayer1::before {
-                left: -2px;
+                left: 2px;
                 transform: none;
             }
         
             .movPlayers.movPlayer2::before {
-                transform: translateX(107px);
+                transform: translateX(99px);
                 width: 115px;
             }
 
             .movGameMode.movGameMode1::before {
-                width: 86px;
-                left: -2px;
+                width: 81px;
+                left: 2px;
                 transform: none;
             }
         
             .movGameMode.movGameMode2::before {
                 transform: translateX(84px);
-                width: 108px;
+                width: 99px;
             }
         
             .movGameMode.movGameMode3::before {
-                transform: translateX(187px);
-                width: 88px;
+                transform: translateX(186px);
+                width: 82px;
             }
     
     .movPlayers > div,
     .movGameMode > div {
         display: inline-block;
-        line-height: 42px;
+        line-height: 44px;
         padding: 0px 25px;
         font-family: 'Quicksand-Semibold';
-        color: #898989;
+        color: #fff;
         opacity: 0.7;
         font-size: 15px;
         cursor: pointer;
@@ -288,27 +261,14 @@
         display: inline-block;
         text-align: center;
         margin: 0 auto;
-        border-radius: 25px;
-        background-color: #f7b529;
         box-sizing: border-box;
         margin-top: 30px;
-        padding: 20px;
-        box-shadow: 5px 5px 7px #dcdde2, 
-                 -5px -5px 7px #f8f9fe;
         transition: 0.2s all ease-out;
     }
-    
-        .turnRed {
-            background-color: rgb(231, 37, 37);
-        }
-
-        .turnGreen {
-            background-color: rgb(23, 150, 23);
-        }
-    
         .turnInDouble {
             text-align: left;
             width: 45%;
+            min-width: 150px;
             display: inline-block;
         }
     
@@ -325,10 +285,6 @@
             border-radius: 40px;
             transition: 0.2s all ease-out;
         }
-    
-            .movCardPlayer2 .turnStateCt{ 
-                background-color: #1864bb;
-            }
             .scoreLb {
                 font-family: 'Quicksand-Semibold';
                 color: #fff;
@@ -341,7 +297,7 @@
             }
     
             .turnOff {
-                opacity: 0.5;
+                opacity: 0.3;
             }
 
             .turnCtWon .turnOff {
@@ -350,16 +306,15 @@
 
     .ext h2 {
         font-size: 25px;
-        color: #484848;
+        color: #fff;
         font-family: 'Quicksand-Bold';
         margin-bottom: 20px;
     }
 
     .ext h3 {
         font-size: 20px;
-        color: #f1a706;
+        color: #f7b529;
         font-family: 'Quicksand-Semibold';
-        opacity: 0.8;
         margin-top: 15px;
         margin-bottom: 10px;
     }
@@ -367,9 +322,215 @@
     .ext p {
         font-family: 'Quicksand-Regular';
         font-size: 16px;
+        color:#ffffff;
         line-height: 26px;
     }
 
     .ext a {
-        color: #222
+        color:#fff
     }
+
+.restartBtn {
+    font-family: 'Quicksand-Semibold';
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #fff;
+    outline: none;
+    padding: 0px 30px;
+    line-height: 45px;
+    border: 0px;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #1c1f23, #21242a);
+    box-shadow:  6px 6px 10px #15171b, 
+                 -6px -6px 10px #292d33;
+    cursor: pointer;
+}
+
+    .restartBtn:hover {
+        background: #1f2227;
+        box-shadow: inset 6px 6px 10px #15171b, 
+                inset -6px -6px 10px #292d33;
+    }
+
+@media screen and (max-width: 860px) {
+
+    body {
+        margin-bottom: 50px;
+    }
+
+    .ct {
+        width: 320px;
+        padding-top: 30px;
+    }
+
+    .movTop {
+        padding: 0px 0px;
+    }
+    
+    .movTop h1 {
+        font-size: 40px;
+        line-height: 40px;
+        float: none;
+        text-align: center;
+    }
+
+    .movTopNav {
+        float: none;
+        text-align: center;
+    }
+
+        .movTopNav a {
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+    .movCard {
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    .movCardTop {
+        height: 37px;
+    }
+
+        .movPlayers, .movGameMode {
+            float: none;
+            margin: 0 auto 20px auto;
+            width: 198px;
+            border-radius: 46px;
+        }
+
+            .movGameMode {
+                margin: 0 auto 0px auto;
+                width: 241px;
+            }
+
+        .movPlayers > div, .movGameMode > div {
+            line-height: 39px;
+            padding: 0px 20px;
+            font-size: 14px;
+        }
+
+        .movPlayers::before, .movGameMode::before {
+            height: 32px;
+            width: 87px;
+            border-radius: 41px;
+        }
+
+            .movPlayers.movPlayer2::before {
+                transform: translateX(88px);
+                width: 104px;
+            }
+
+            .movGameMode.movGameMode1::before {
+                width: 67px;
+            }
+
+            .movGameMode.movGameMode2::before {
+                transform: translateX(70px);
+                width: 90px;
+            }
+
+            .movGameMode.movGameMode3::before {
+                transform: translateX(160px);
+                width: 74px;
+            }
+
+    .movLives {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        display: block;
+        padding-top: 0px;
+        padding-left: 0px;
+        height: auto;
+        width: 120px;
+        border-radius: 35px;
+        color: #fff;
+        line-height: 35px;
+        font-size: 18px;
+        margin: 25px auto -5px auto;
+    }
+
+    .movLives span {
+        font-family: 'Quicksand-Semibold';
+        display: inline-block;
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 35px;
+        opacity: 0.8;
+        margin-right: 10px;
+    }
+
+    .turnStateCt {
+        margin-top: 30px;
+    }
+
+    .phraseCt {
+        width: 100%;
+        margin: 25px auto 25px auto;
+        height: auto;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 3px;
+    }
+
+    .clueCt {
+        text-align: center;
+        margin-bottom: 35px;
+        margin-top: 40px;
+    }
+
+    .clueCt span {
+        line-height: 35px;
+        padding: 0px 16px;
+        font-size: 15px;
+        border-radius: 40px;
+    }
+
+    .turnIndicator {
+        margin-bottom: 5px;
+        line-height: 26px;
+        padding: 0px 0px;
+        font-size: 18px;
+    }
+
+
+        .turnInDouble {
+            min-width: 125px;
+        }
+
+    .scoreLb {
+        font-size: 18px;
+    }
+
+    .lettersCt {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0px auto 8px auto;
+        text-align: center;
+    }
+
+    .letter {
+        font-size: 23px;
+        line-height: 42px;
+        padding-left: 2px;
+        height: 40px;
+        width: 42px;
+        margin: 6px;
+        background: linear-gradient(145deg, #1c1f23, #21242a);
+        box-shadow: 4px 4px 8px #141519, -4px -4px 8px #2a2f35;
+    }
+
+    .ext h2 {
+        font-size: 21px;
+    }
+
+    .ext p {
+        font-size: 14px;
+        line-height: 23px;
+    }
+}
